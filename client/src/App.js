@@ -39,7 +39,7 @@ function App() {
       {currentTab === "books" ? (
         <AddBookDialog
           onSubmit={() => console.log("Add book!")} //Replace with a function
-          authors={mockedAuthors}
+          authors={mockedAuthors} // Replace with real data
           toggleModal={toggleModal}
           modalOpen={modalOpen}
         />
