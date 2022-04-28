@@ -2,7 +2,7 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 
 const authors = [
   {
-    name: "Charlie McBrown",
+    name: "Claire McFlare",
     books: [],
   },
   {
@@ -13,22 +13,22 @@ const authors = [
 
 const books = [
   {
-    title: "When winning ends",
+    title: "The Blade Itself",
   },
   {
     title: "GraphQL with Apollo - Better than the REST?",
   },
   {
-    title: "Book of Death",
+    title: "The Blade in the Abyss",
   },
   {
-    title: "Moms got a new API",
+    title: "Armies of My Imagination",
   },
   {
-    title: "Tomorrow - Today",
+    title: "Gangsters and Fish",
   },
   {
-    title: "Brown - Downtown",
+    title: "2099: Capella",
   },
 ];
 const uri = `mongodb://localhost:5005/`;
