@@ -25,4 +25,4 @@ BooksSchema.pre("deleteOne", async function (next) {
   }
 });
 
-export const Books = model("Books", BooksSchema);
+export const Book = model("Books", BooksSchema);

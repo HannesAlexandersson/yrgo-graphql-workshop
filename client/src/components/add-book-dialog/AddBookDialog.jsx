@@ -28,7 +28,7 @@ export const AddBookDialog = ({
       return { ...prevState, authorId: event.target.value };
     });
   };
-
+  
   const handleClose = () => {
     toggleModal(false);
     setAuthorID("");

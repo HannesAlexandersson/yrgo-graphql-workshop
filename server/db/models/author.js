@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Books } from "./books.js";
+import { Book } from "./books.js";
 const { model, Schema, SchemaTypes } = mongoose;
 
 export const AuthorSchema = new Schema({
@@ -8,7 +8,7 @@ export const AuthorSchema = new Schema({
 });
 
 AuthorSchema.pre("deleteOne", async function (next) {
-  await Books.deleteMany({ author: this._conditions._id });
+  await Book.deleteMany({ author: this._conditions._id });
   next();
 });
 

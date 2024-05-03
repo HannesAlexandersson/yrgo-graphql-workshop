@@ -9,12 +9,21 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
+
 export const AddAuthorDialog = ({ onSubmit, modalOpen, toggleModal }) => {
   const [authorName, setAuthorName] = useState("");
 
   const handleChange = (event) => {
     setAuthorName(event.target.value);
   };
+
+  const handleSubmit = () => {
+    if (authorName) {
+      onSubmit(authorName);
+      setAuthorName(""); 
+    }
+  };
+  
 
   return (
     <Dialog open={modalOpen} onClose={() => toggleModal(false)}>
@@ -30,14 +39,13 @@ export const AddAuthorDialog = ({ onSubmit, modalOpen, toggleModal }) => {
           fullWidth
           variant="standard"
           required
+          value={authorName}
           onChange={handleChange}
         />
       </DialogContent>
       <DialogActions>
         <Button onClick={() => toggleModal(false)}>Cancel</Button>
-        <Button disabled={!authorName} onClick={() => onSubmit(authorName)}>
-          Submit
-        </Button>
+        <Button disabled={!authorName} onClick={handleSubmit}>Submit</Button>
       </DialogActions>
     </Dialog>
   );
